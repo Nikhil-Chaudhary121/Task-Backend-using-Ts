@@ -13,13 +13,13 @@ const createNote = async (req, res) => {
         if (!checUser) {
             res.status(400).send({ error: "User is not Found" });
         }
-        console.log(checUser);
+        // console.log(checUser);
         const title = req.body.title;
         const user = checUser?._id;
         console.log(title);
         const note = new note_model_1.default({ title, user });
         await note.save();
-        console.log(note);
+        // console.log(note);
         res.status(201).json(note);
     }
     catch (error) {

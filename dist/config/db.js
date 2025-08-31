@@ -7,7 +7,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const connectDB = async () => {
     try {
         const conn = await mongoose_1.default.connect(process.env.MONGO_URL || "mongodb://localhost:27017/notes-app");
-        console.log(`MongoDB Connected: ${conn.connection.host}`);
+        console.log(`MongoDB Connected`);
     }
     catch (error) {
         console.error("MongoDB connection failed:", error);
