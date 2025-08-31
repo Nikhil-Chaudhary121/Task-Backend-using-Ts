@@ -12,7 +12,7 @@ export const createNote = async (req: Request, res: Response) => {
     if(!checUser){
       res.status(400).send({error: "User is not Found"})
     }
-    console.log(checUser);
+    // console.log(checUser);
     
     const title = req.body.title;
   
@@ -22,7 +22,7 @@ export const createNote = async (req: Request, res: Response) => {
 
     const note = new Note({ title,user  });
     await note.save();
-    console.log(note);
+    // console.log(note);
     
     res.status(201).json(note);
   } catch (error) {

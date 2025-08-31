@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
-import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../model/user.model"; // you'll create later
-import { error, log } from "console";
+
 
 // POST /signup
 export const signup = async (req: Request, res: Response) => {
