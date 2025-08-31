@@ -13,7 +13,7 @@ router.post("/signup", auth_controller_1.signup);
 // POST /api/auth/login
 router.post("/login", auth_controller_1.login);
 router.get('/google', passport_1.default.authenticate('google', { scope: ['profile', 'email'] }));
-router.get('/google/callback', passport_1.default.authenticate('google', { session: false }), (req, res) => {
+router.get(`/google/callback`, passport_1.default.authenticate('google', { session: false }), (req, res) => {
     const { token, user } = req.user;
     res.redirect(`${process.env.FRONTEND_URL}/?token=${token}&userId=${user._id}`);
 });

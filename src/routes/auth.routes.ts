@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { signup, login, getUser } from "../controller/auth.controller";
 import passport from "../config/passport";
+ 
+
 
 const router = Router();
 
@@ -16,7 +18,7 @@ router.post("/login", login);
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 router.get(
-  '/google/callback',
+  `/google/callback`,
   passport.authenticate('google', { session: false }),
   (req, res) => {
     const { token, user } = req.user as any;
