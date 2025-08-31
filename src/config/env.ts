@@ -13,7 +13,7 @@ function getEnvVar(key: string): string {
 export const ENV = {
   NODE_ENV: getEnvVar("NODE_ENV"),
   PORT: getEnvVar("PORT"),
-  MONGO_URI: getEnvVar("MONGO_URI"),
+  MONGO_URL: getEnvVar("MONGO_URL"),
 
   GOOGLE_CLIENT_ID: getEnvVar("GOOGLE_CLIENT_ID"),
   GOOGLE_CLIENT_SECRET: getEnvVar("GOOGLE_CLIENT_SECRET"),
